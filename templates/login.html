@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -365,4 +366,373 @@
         crossorigin="anonymous"></script>
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login / Signup</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Montserrat+Sans&display=swap" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous" />
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" />
+
+    <style>
+        body {
+            background: radial-gradient(ellipse at 0% 100%, rgba(104, 128, 138, 0.4) 10%, rgba(138, 114, 76, 0) 40%),
+                linear-gradient(to bottom, rgba(57, 173, 219, 0.25) 0%, rgba(42, 60, 87, 0.4) 100%),
+                linear-gradient(135deg, #670d10 0%, #092756 100%);
+            font-family: 'Barlow', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container-fluid {
+            padding: 3rem 8rem;
+            margin-bottom: 3rem;
+        }
+
+
+        .register-left {
+            color: #fff;
+            /* text-align: center; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .register-left a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .register-left p {
+            padding: 5%;
+            text-align: center;
+        }
+
+        .register-left input {
+            border: none;
+            border-radius: 1.5rem;
+            padding: 0.5rem 4rem;
+            /* width: 60%; */
+            background: #f8f9fa;
+            font-weight: bold;
+            color: #383d41;
+            margin-top: 5%;
+            margin-bottom: 3%;
+            cursor: pointer;
+        }
+
+
+        .register-right {
+            background: #f8f9fa;
+            border-top-left-radius: 11% 50%;
+            border-bottom-left-radius: 11% 50%;
+            padding-left: 10rem !important;
+        }
+
+
+        .register-heading {
+            text-align: center;
+            color: #495057;
+        }
+
+        .nav-tabs {
+            border: none;
+            background: #0062cc;
+            border-radius: 1rem;
+            /* width: 22%; */
+        }
+
+        .nav-tabs .nav-link {
+            padding: 2%;
+            height: 34px;
+            font-weight: 600;
+            color: #fff;
+            border-top-right-radius: 1.5rem;
+            border-bottom-right-radius: 1.5rem;
+        }
+
+        .nav-tabs .nav-link:hover {
+            border: none;
+        }
+
+        .nav-tabs .nav-link.active {
+            color: #0062cc;
+            border: 2px solid #0062cc;
+            border-top-left-radius: 1.5rem;
+            border-bottom-left-radius: 1.5rem;
+        }
+
+        .register-form {
+            /* padding: 0 3%; */
+            padding-top: 3%;
+            /* padding-bottom: 1%; */
+        }
+
+
+        .btnRegister {
+            background: #3d405b;
+            color: #fff;
+            padding: 0.5rem 1.4rem;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: 0.1s;
+            box-shadow: 0 4px 0 #a54141;
+            font-family: 'Montserrat', sans-serif;
+            /* letter-spacing: 1px; */
+            font-size: 0.9rem;
+        }
+
+        .btnRegister:active {
+            transform: translateY(5px);
+            box-shadow: 0 2px 0 #ff0030;
+        }
+
+        .btnRegister:disabled {
+            cursor: auto;
+            color: grey;
+            background-color: lightcyan;
+        }
+
+         /* popup modal */
+    button {
+      font-size: 18px;
+      font-weight: 400;
+      color: #fff;
+      padding: 14px 22px;
+      border: none;
+      background: #4070f4;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #265df2;
+    }
+
+    .modal-container {
+      display: none;
+    }
+
+    .modal-box {
+      position: fixed;
+      left: 50%;
+      top: 48%;
+      /* transform: translate(-50%, -50%); */
+    }
+
+    .modal-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 350px;
+      width: 100%;
+      padding: 20px 20px 30px 20px;
+      border-radius: 24px;
+      background-color: #fff;
+      transition: all 0.5s ease;
+      transform: translate(-50%, -50%) scale(1.15);
+      box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal-box i {
+      font-size: 50px;
+      color: #4070f4;
+    }
+
+    .modal-box h2 {
+      font-size: 28px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    .modal-box button {
+      font-size: 15px;
+      padding: 6px 12px;
+      margin: 0 10px;
+    }
+    /* popup modal */
+
+
+        /* responsiveness */
+        @media only screen and (max-width: 1024px) {
+            .register-right {
+                padding-left: 3rem !important;
+            }
+
+            .nav-tabs {
+                width: 90% !important;
+                margin-bottom: 1rem;
+            }
+
+            .container-fluid {
+                padding: 3rem 5rem;
+            }
+
+            .register-left input {
+                display: none;
+            }
+
+            .modal-box {
+                max-width: 280px !important;
+            }
+        }
+
+        @media only screen and (max-width: 425px) {
+            .nav-tabs {
+                width: 100% !important;
+            }
+
+            .container-fluid {
+                padding: 3rem 4rem 2rem 4rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- left side -->
+            <div class="col-md-3 register-left text-center">
+                <h2>Welcome to Skin Cancer App</h2>
+                <p>Early detection of melanoma at your fingertips.</p>
+            </div>
+
+            <!-- right side -->
+            <div class="col-md-9 register-right p-4">
+                <ul class="nav nav-tabs nav-justified mb-4" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link px-3 active" id="login-tab" data-toggle="tab" href="#login" role="tab"
+                            aria-controls="login" aria-selected="true">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" id="signup-tab" data-toggle="tab" href="#signup" role="tab"
+                            aria-controls="signup" aria-selected="false">Sign Up</a>
+                    </li>
+                </ul>
+
+
+
+                <div class="tab-content" id="myTabContent">
+                    <!-- LOGIN FORM -->
+                    <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                        <h3 class="register-heading">Login</h3>
+                        <form method="POST" action="{{ url_for('login') }}">
+                            <input type="hidden" name="action" value="login">
+                            <div class="row register-form">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" name="username_or_email" class="form-control"
+                                            placeholder="Username or Email *" required />
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="password" name="password" class="form-control"
+                                            placeholder="Password *" required />
+                                    </div>
+                                </div>
+                                <div class="col-md-6"></div>
+                                <div class="col-md-6 text-right pt-3">
+                                    <input type="submit" class="btnRegister" value="Login" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- SIGNUP FORM -->
+                    <div class="tab-pane fade" id="signup" role="tabpanel" aria-labelledby="signup-tab">
+                        <h3 class="register-heading">Sign Up</h3>
+                        <form method="POST" action="{{ url_for('login') }}">
+                            <input type="hidden" name="action" value="signup">
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="username" class="form-control" placeholder="Username *"
+                                            required />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="email" name="email" class="form-control" placeholder="Email *"
+                                            required />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="password" name="password" class="form-control"
+                                            placeholder="Password *" required />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <select name="role" class="form-control" required>
+                                            <option value="PATIENT">Patient</option>
+                                            <option value="ADMIN">Admin</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6"></div>
+                                <div class="col-md-6 text-right">
+                                    <input type="submit" class="btnRegister" value="Sign Up" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <div class="modal-container">
+        <div class="modal-box text-center">
+            {% for category, msg in messages %}
+            <i
+                class="bi {{ 'bi-check-circle text-success' if category=='success' else 'bi-exclamation-circle text-danger' }}"></i>
+            <h2 class="pt-2 pb-2">{{ 'Success' if category=='success' else 'Error' }}</h2>
+            <p>{{ msg }}</p>
+            {% endfor %}
+            <button class="close-btn btn btn-primary mt-3">OK, Close</button>
+        </div>
+    </div>
+    {% endif %}
+    {% endwith %}
+
+    <!-- Modal JS -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const modal = document.querySelector(".modal-container");
+            if (!modal) return;
+            modal.style.display = "block";
+            document.querySelector(".close-btn").onclick = () => {
+                modal.style.display = "none";
+            };
+        });
+    </script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+</body>
+
+>>>>>>> bbf532471bdf245cba50623873f12498da06824f
 </html>

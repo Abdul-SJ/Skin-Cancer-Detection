@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 flask
 numpy
 opencv-python
 tensorflow
 keras
 matplotlib
+=======
+flask
+numpy
+opencv-python
+tensorflow
+keras
+matplotlib
+>>>>>>> bbf532471bdf245cba50623873f12498da06824f
